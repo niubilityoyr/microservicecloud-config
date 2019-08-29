@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+--- #三个短横线分割多个profile区（文档块）
+spring:
+  profiles: dev #指定当前属于哪个环境
+  application:
+    name: microservicecloud-config-client-dev
+
+server:
+  port: 8095
+
+---
+spring:
+  profiles: test #指定当前属于哪个环境
+  application:
+    name: microservicecloud-config-client-test
+
+server:
+  port: 9086
